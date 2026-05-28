@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NodeJS Class – Demos</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --fg: #111827;
+        --muted: #6b7280;
+        --card: #ffffff;
+        --bg: #f3f4f6;
+        --link: #2563eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #e5e7eb;
+          --muted: #9ca3af;
+          --card: #111827;
+          --bg: #030712;
+          --link: #60a5fa;
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.5;
+        color: var(--fg);
+        background: var(--bg);
+      }
+
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 16px 48px;
+      }
+
+      header h1 {
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+      header p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(107, 114, 128, 0.25);
+        border-radius: 12px;
+        padding: 14px 14px 12px;
+      }
+
+      .card h2 {
+        font-size: 14px;
+        margin: 0 0 6px;
+        color: var(--muted);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+      li + li {
+        margin-top: 6px;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+
+      footer {
+        margin-top: 22px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Class demos</h1>
+        <p>Quick links to HTML/CSS demos and notes.</p>
+      </header>
+
+      <section class="grid" aria-label="Demo links">
+        <div class="card">
+          <h2>CSS demos (HTML pages)</h2>
+          <ul>
+            <li><a href="./css/css-positioning-examples.html">CSS positioning</a></li>
+            <li><a href="./css/flexbox-examples.html">Flexbox examples</a></li>
+            <li><a href="./css/grid-example.html">CSS Grid example</a></li>
+            <li><a href="./css/grid-areas.html">Grid areas</a></li>
+            <li><a href="./css/rothko-patterns.html">Rothko patterns</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Notes (Markdown)</h2>
+          <ul>
+            <li>
+              <a href="./docs/CriticalRenderingPath.md">Critical Rendering Path</a>
+              <div style="color: var(--muted); font-size: 13px; margin-top: 4px">
+                On GitHub this renders as Markdown. On GitHub Pages it may download/show raw unless you use Jekyll.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        Tip: If you enable GitHub Pages, this page becomes your homepage at
+        <code>/index.html</code>.
+      </footer>
+    </div>
+  </body>
+</html>
+
