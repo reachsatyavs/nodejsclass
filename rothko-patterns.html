@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rothko patterns</title>
+  <style>
+    * { margin: 10; padding: 10; box-sizing: border-box; }
+
+    body {
+      background: #8b8888;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      color: #a8a6a0;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .rothko {
+      width: 280px;
+      height: 360px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column; /* stacks blocks vertically */
+      gap: 16px;
+    }
+
+
+
+    /* 1 — Red / orange */
+    .rothko-1 { background: #5c1a00; }
+    .rothko-1 .a { background: #c0392b; flex: 2; }
+    .rothko-1 .b { background: #e67e22; flex: 6; }
+
+    /* 2 — Blue / violet */
+    .rothko-2 { background: #0a0a1a; }
+    .rothko-2 .a { background: #1a3a6e; flex: 2; }
+    .rothko-2 .b { background: #4a1060; flex: 2; }
+
+    /* 3 — Earth tones */
+    .rothko-3 { background: #1c1008; }
+    .rothko-3 .a { background: #b8860b; flex: 200%; }
+    .rothko-3 .b { background: #8b3a1a; flex: 500% ; }
+    .rothko-3 .c { background: #6d0404; flex: 300% ; }
+
+    /* 4 — your new panel (needs its own colors) */
+    .rothko-4 { background: #2a2a2a; }
+    .rothko-4 .a { background: #6b8e9f; flex: 3; }
+    .rothko-4 .b { background: #3d5a3d; flex: 2; }
+
+    /* centers one panel below the gallery row */
+    .center-panel {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Rothko patterns (3)</h1>
+
+  <div class="gallery">
+    <div class="rothko rothko-1">
+      <div class=" a"></div>
+      <div class=" b"></div>
+    </div>
+
+    <div class="rothko rothko-2">
+      <div class=" a"></div>
+      <div class=" b"></div>
+    </div>
+
+    <div class="rothko rothko-3">
+      <div class=" a"></div>
+      <div class=" b"></div>
+      <div class=" c"></div>
+    </div>
+
+
+
+  </div>
+
+  <!-- just lying around.. without any formatting wrt to block  -->
+
+    <div class="rothko rothko-3" justify-content="center">
+      <div class=" a"></div>
+      <div class=" b"></div>
+    </div>
+
+
+<!-- if you want it to be in the center.. put it inside flex block -->
+  <div class="center-panel">
+    <div class="rothko rothko-3">
+      <div class=" a"></div>
+      <div class=" b"></div>
+    </div>
+  </div>
+
+
+</body>
+</html>

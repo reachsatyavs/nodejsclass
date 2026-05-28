@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Positioning</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #8b8888;
+      font-family: Georgia, serif;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+    }
+
+    .demo {
+      max-width: 560px;
+      margin: 0 auto 28px;
+      background: #ddd;
+      padding: 16px;
+    }
+
+    .demo h2 {
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      opacity: 0.85;
+      margin-top: 10px;
+      line-height: 1.35;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 110px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #111;
+      background: #f0eeea;
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .a { background: #c0392b; color: #fff; border: none; }
+    .b { background: #e67e22; color: #fff; border: none; }
+    .c { background: #1a3a6e; color: #fff; border: none; }
+
+    /* relative + absolute demo */
+    .frame {
+      position: relative; /* makes a positioning context for absolute children */
+      height: 140px;
+      border: 1px dashed rgba(0,0,0,0.35);
+      background: rgba(255,255,255,0.35);
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    /* fixed demo */
+    .fixed-badge {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      padding: 8px 10px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+
+    /* sticky demo */
+    .sticky-bar {
+      position: sticky;
+      top: 10px;
+      padding: 10px;
+      background: rgba(26, 58, 110, 0.9);
+      color: #fff;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .spacer {
+      height: 650px; /* just to create scroll */
+      background: rgba(255,255,255,0.25);
+      border: 1px dashed rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Positioning (5)</h1>
+
+  <div class="demo">
+    <h2>1 — static (default)</h2>
+    <div class="row">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+    </div>
+    <p class="note">These boxes are in normal flow (left → right). <b>top/left/right/bottom</b> won’t move a static element.</p>
+  </div>
+
+  <div class="demo">
+    <h2>2 — relative (moves, but keeps its spot)</h2>
+    <div class="row">
+      <div class="box a">A</div>
+      <div class="box b" style="position: relative; left: 20px; top: 10px;">B</div>
+      <div class="box c">C</div>
+    </div>
+    <p class="note">B is moved using <b>left/top</b>, but it still “reserves” its original space, so the row layout doesn’t collapse.</p>
+  </div>
+
+  <div class="demo">
+    <h2>3 — absolute (removed from flow)</h2>
+    <div class="frame">
+      <div class="box a">A</div>
+      <div class="box b" style="position: absolute; right: 10px; bottom: 10px;">ABS</div>
+      <div class="box c">C</div>
+    </div>
+    <p class="note">ABS is positioned relative to the dashed frame (because the frame is <b>position: relative</b>). It does not take space in the normal layout.</p>
+  </div>
+
+  <div class="demo">
+    <h2>4 — fixed (sticks to the screen)</h2>
+    <p class="note">Scroll the page. The “FIXED” badge stays at the bottom-right of the screen because it’s <b>position: fixed</b>.</p>
+  </div>
+
+  <div class="demo">
+    <h2>5 — sticky (sticks after you scroll)</h2>
+    <div class="sticky-bar">STICKY — stays at the top while its section scrolls</div>
+    <div class="spacer"></div>
+    <p class="note">Sticky behaves like relative until it reaches <b>top: 10px</b>, then it “sticks” while you scroll inside this area.</p>
+  </div>
+
+  <div class="fixed-badge">FIXED</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Grid – Template Areas</title>
+  <style>
+
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 900px;
+
+      /* Each string = one row
+         Each word   = one cell
+         Same word repeated = that area spans those cells */
+      grid-template-areas:
+        "header header  header"
+        "sidebar content-1 content-1"
+        "sidebar content-2 content-3"
+        "footer  footer  footer";
+    }
+
+    /* ══════════════════════════════════════════
+       CHILD — base style for all cells
+    ══════════════════════════════════════════ */
+    .child {
+      background-color: rgb(22, 144, 15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      min-height: 80px;
+    }
+
+    .header    { grid-area: header;    }
+    .sidebar   { grid-area: sidebar;    }
+    .content-1 { grid-area: content-1; }
+    .content-2 { grid-area: content-2;}
+    .content-3 { grid-area: content-3; }
+    .footer    { grid-area: footer;     }
+
+   
+  </style>
+</head>
+<body>
+
+  <h2>CSS Grid — grid-template-areas layout</h2>
+
+
+  <div class="container">
+    <div class="child header">header</div>
+    <div class="child sidebar">sidebar</div>
+    <div class="child content-1">content-1</div>
+    <div class="child content-2">content-2</div>
+    <div class="child content-3">content-3</div>
+    <div class="child footer">footer</div>
+  </div>
+
+
+</body>
+</html>

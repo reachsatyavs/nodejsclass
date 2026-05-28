@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid</title>
+  <style>
+
+    body {
+      background: #8b8888;
+      font-family: Georgia, serif;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      padding: 20px;
+      background: #ddd;
+    }
+
+    .child {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.85rem;
+    }
+
+    .child1 { background: #c0392b; }
+    .child2 { background: #e67e22; }
+    .child3 { background: #1a3a6e; }
+    .child4 { background: #c0392b; }
+    .child5 { background: #e67e22; }
+    .child6 { background: #1a3a6e; }
+  </style>
+</head>
+<body>
+
+  <h1>Grid</h1>
+
+  <div class="container">
+    <div class="child child1">item 1</div>
+    <div class="child child2">item 2</div>
+    <div class="child child3">item 3</div>
+    <div class="child child4">item 4</div>
+    <div class="child child5">item 5</div>
+    <div class="child child6">item 6</div>
+  </div>
+
+</body>
+</html>
