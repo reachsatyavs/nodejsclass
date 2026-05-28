@@ -84,7 +84,7 @@ graph LR
 
     subgraph Server_Side [Server Side]
         LB[Load Balancer]
-        App_Server[Application Server<br/>(Node.js, Java, Python)]
+        App_Server[Application Server<br/>Node.js, Java, Python]
         DB[(Database)]
         CDN[CDN / Static Files]
     end
