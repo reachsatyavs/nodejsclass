@@ -1,0 +1,25 @@
+Important JavaScript & Web Development Links
+==============================================
+
+CSS Learning
+------------
+Flexbox Froggy (learn CSS flexbox through a game)
+https://flexboxfroggy.com/
+
+JavaScript Concepts
+-------------------
+Philip Roberts (event loop talk, JS essays)
+http://latentflip.com
+
+CDN & Libraries
+---------------
+cdnjs (free CDN for JS/CSS libraries)
+https://cdnjs.com/
+
+CSS Frameworks & UI Libraries
+-----------------------------
+Tailwind CSS (utility-first CSS framework)
+https://tailwindcss.com/
+
+Chakra UI (React component library)
+https://chakra-ui.com/
