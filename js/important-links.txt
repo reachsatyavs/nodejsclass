@@ -23,3 +23,10 @@ https://tailwindcss.com/
 
 Chakra UI (React component library)
 https://chakra-ui.com/
+
+Dummy Json
+https://dummyjson.com/
+
+
+Class exercises links:
+https://docs.google.com/document/d/1x-W1vlD7_kmgyf-P-k33ATDuYbP9kB-c1BWF0XfmB78/edit?usp=sharing
